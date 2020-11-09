@@ -12,23 +12,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*localhost/dashboard/
+localhost/dashboard/products*/
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
+Route::namespace('Dashboard')->name('dashboard.')->prefix('admin')->group(function(){
+    Route::get('/','DashboardController@index');
+    Route::resource('posts','PostController');
+    Route::resource('users','UserController');
+    Route::resource('categories','CategoryController');
+});
 
-Route::get('/',function (){
-    return view('frontsite.home');
-})->name('frontsite.home');
+Route::get('/','FrontSiteController@showHome')->name('frontsite.home');
+Route::get('/single','FrontSiteController@showSingle')->name('frontsite.single');
+Route::get('/blog','FrontSiteController@showBlog')->name('frontsite.blog');
+Route::get('/contact','FrontSiteController@showContact')->name('frontsite.contact');
 
-Route::get('single',function (){
-    return view('frontsite.single');
-})->name('frontsite.single');
-
-Route::get('blog',function (){
-    return view('frontsite.blog');
-})->name('frontsite.blog');
-
-Route::get('contact',function (){
-    return view('frontsite.contact');
-})->name('frontsite.contact');
+//Route::resource('users','Dashboard\UserController');

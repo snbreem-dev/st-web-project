@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="225446ec-9fec-4717-befe-baccde3099e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/dashboard.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/layouts/master.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/layouts/menu.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/posts/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,8 +139,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/seeds" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IUGaza\02-first-2020-2021\مواضيع خاصة في الويب\project.test\database\seeds" />
+      <recent name="D:\IUGaza\02-first-2020-2021\مواضيع خاصة في الويب\project.test\resources\views\dashboard\layouts" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -151,6 +165,11 @@
       <updated>1603827215329</updated>
       <workItem from="1603827216480" duration="3628000" />
       <workItem from="1603995650923" duration="5750000" />
+      <workItem from="1604329341320" duration="2527000" />
+      <workItem from="1604389637301" duration="3124000" />
+      <workItem from="1604503369435" duration="2000000" />
+      <workItem from="1604832723121" duration="63000" />
+      <workItem from="1604910575390" duration="12071000" />
     </task>
     <servers />
   </component>
@@ -158,9 +177,13 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="389" y="97" width="587" height="534" key="find.popup" timestamp="1603997795853">
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1604912538883">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="389" y="97" width="587" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1603997795853" />
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1604912538883" />
+    <state x="389" y="97" width="587" height="534" key="find.popup" timestamp="1604913186375">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="389" y="97" width="587" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1604913186375" />
   </component>
 </project>

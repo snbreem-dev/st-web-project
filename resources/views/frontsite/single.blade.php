@@ -169,3 +169,11 @@
 
 @endsection
 
+@section('jsCode')
+    <script>
+        $(document).ready(function () {
+            $('.navbar-nav > li').removeClass("active");
+            $('.single').addClass("active");
+        });
+    </script>
+@endsection

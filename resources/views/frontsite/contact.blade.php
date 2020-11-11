@@ -89,3 +89,11 @@
         </div>
     </div>
 @endsection
+@section('jsCode')
+    <script>
+        $(document).ready(function () {
+            $('.navbar-nav > li').removeClass("active");
+            $('.contact').addClass("active");
+        });
+    </script>
+@endsection

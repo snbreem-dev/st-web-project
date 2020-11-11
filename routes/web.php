@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 localhost/dashboard/products*/
 
 Route::namespace('Dashboard')->name('dashboard.')->prefix('admin')->group(function(){
-    Route::get('/','DashboardController@index');
+    Route::get('/','DashboardController@index')->name('home');
     Route::resource('posts','PostController');
     Route::resource('users','UserController');
     Route::resource('categories','CategoryController');

@@ -10,14 +10,17 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="{{route('frontsite.home')}}">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item blog">
                         <a class="nav-link" href="{{route('frontsite.blog')}}">Blog <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item single">
                         <a class="nav-link" href="{{route('frontsite.single')}}">Single <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item contact">
                         <a class="nav-link" href="{{route('frontsite.contact')}}">Contact <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('dashboard.home')}}">Dashboard <span class="sr-only">(current)</span></a>
                     </li>
 {{--                    <li class="nav-item dropdown">--}}
 {{--                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton2" data-toggle="dropdown"--}}

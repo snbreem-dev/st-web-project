@@ -214,3 +214,12 @@
     </div>
 
 @endsection
+
+@section('jsCode')
+    <script>
+        $(document).ready(function () {
+            $('.navbar-nav > li').removeClass("active");
+            $('.blog').addClass("active");
+        });
+    </script>
+@endsection

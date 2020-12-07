@@ -10,6 +10,18 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function phone(){
+        return $this->hasOne('App\Phone');
+    }
+
+    public function roles(){
+        return $this->belongsToMany('App\Role');
+    }
+
+    public function image(){
+        return $this->morphOne('App\Image','imageable');
+    }
+
     /**
      * The attributes that are mass assignable.
      *

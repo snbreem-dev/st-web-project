@@ -2,13 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="225446ec-9fec-4717-befe-baccde3099e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Phone.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/PhoneFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_200239_create_phones_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/PhoneSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/layouts/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/layouts/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontsite/blog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontsite/blog.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontsite/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontsite/contact.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontsite/layouts/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontsite/layouts/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontsite/single.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontsite/single.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/CommentFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CommentFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/PostFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/PostFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_09_184018_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_09_184018_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_09_184111_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_09_184111_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_09_184222_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_09_184222_create_comments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/CommentSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CommentSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,13 +149,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/seeds" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IUGaza\02-first-2020-2021\مواضيع خاصة في الويب\project.test\app" />
+      <recent name="D:\IUGaza\02-first-2020-2021\مواضيع خاصة في الويب\project.test\database\migrations" />
       <recent name="D:\IUGaza\02-first-2020-2021\مواضيع خاصة في الويب\project.test\database\seeds" />
+      <recent name="D:\IUGaza\02-first-2020-2021\مواضيع خاصة في الويب\project.test\database\factories" />
       <recent name="D:\IUGaza\02-first-2020-2021\مواضيع خاصة في الويب\project.test\resources\views\dashboard\layouts" />
     </key>
   </component>
@@ -170,6 +184,13 @@
       <workItem from="1604832723121" duration="63000" />
       <workItem from="1604910575390" duration="12071000" />
       <workItem from="1605032973671" duration="3637000" />
+      <workItem from="1605081692452" duration="150000" />
+      <workItem from="1605803686536" duration="2090000" />
+      <workItem from="1605884780941" duration="2650000" />
+      <workItem from="1606120844949" duration="108000" />
+      <workItem from="1606931611779" duration="4674000" />
+      <workItem from="1607107406894" duration="9971000" />
+      <workItem from="1607256653337" duration="25000" />
     </task>
     <servers />
   </component>
@@ -177,6 +198,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606931666434">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606931666434" />
     <state x="517" y="287" key="NewPhpFileDialog" timestamp="1604912538883">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

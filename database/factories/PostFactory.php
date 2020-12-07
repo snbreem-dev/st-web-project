@@ -12,7 +12,7 @@ $factory->define(Post::class, function (Faker $faker) {
         'feature_image' => 'posts/feature_images/img.jpg',
         'large_image' => 'posts/large_image/img.jpg',
         'views' => random_int(20,200),
-        'shares' => random_int(20,200),
+        'share' => random_int(20,200),
         'category_id' => \App\Category::all()->random(),
         'user_id' => \App\User::all()->random()
     ];

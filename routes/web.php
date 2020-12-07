@@ -15,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 /*localhost/dashboard/
 localhost/dashboard/products*/
 
+Route::get('train','TrainController@querybuilder');
+Route::get('orm','TrainController@orm');
+Route::get('relationships','TrainController@relationships');
+Route::get('poly_relationships','TrainController@poly_relationships');
+
 Route::namespace('Dashboard')->name('dashboard.')->prefix('admin')->group(function(){
     Route::get('/','DashboardController@index')->name('home');
     Route::resource('posts','PostController');

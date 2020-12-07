@@ -4,16 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Video extends Model
 {
-    public function comments(){
-        return $this->hasMany('App\Comment');
-    }
-
-    public function image(){
-        return $this->morphOne('App\Image','imageable');
-    }
-
     public function shares(){
         return $this->morphMany('App\Share','shareable');
     }

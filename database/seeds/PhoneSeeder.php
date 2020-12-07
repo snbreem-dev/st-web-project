@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class CommentSeeder extends Seeder
+class PhoneSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class CommentSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\Comment::class, 100)->create();
+        factory(App\Phone::class,100)->create();
     }
 }

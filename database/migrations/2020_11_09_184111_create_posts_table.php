@@ -17,12 +17,12 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('body');
-            $table->string('feature_image');
-            $table->string('large_image');
+            $table->string('feature_image')->default('posts/feature_images/img.jpg');
+            $table->string('large_image')->default('posts/large_image/img.jpg');
             $table->integer('views')->default(0);
             $table->integer('share')->default(0);
-            $table->unsignedBigInteger('category_id');
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories');

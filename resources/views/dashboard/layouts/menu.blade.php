@@ -34,13 +34,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/UI/general.html" class="nav-link">
+                            <a href="{{route('dashboard.posts.create')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add Post</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/UI/general.html" class="nav-link">
+                            <a href="{{route('dashboard.posts.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>List Posts</p>
                             </a>

@@ -9,4 +9,8 @@ class Category extends Model
 {
     use SoftDeletes;
     protected $fillable = ['name','code'];
+
+    public function posts(){
+        return $this->hasMany('App\Post');
+    }
 }

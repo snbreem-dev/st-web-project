@@ -6,19 +6,28 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    public function comments(){
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
+
+    public function comments()
+    {
         return $this->hasMany('App\Comment');
     }
 
-    public function image(){
-        return $this->morphOne('App\Image','imageable');
+    public function image()
+    {
+        return $this->morphOne('App\Image', 'imageable');
     }
 
-    public function shares(){
-        return $this->morphMany('App\Share','shareable');
+    public function shares()
+    {
+        return $this->morphMany('App\Share', 'shareable');
     }
 
-    public function tags(){
-        return $this->morphToMany('App\Tag','taggable');
+    public function tags()
+    {
+        return $this->morphToMany('App\Tag', 'taggable');
     }
 }

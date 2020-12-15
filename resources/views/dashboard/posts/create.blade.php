@@ -6,7 +6,7 @@
     <!-- Main content -->
     <section class="content">
         @include('dashboard.layouts.messages')
-        <form method="POST" action="{{route('dashboard.posts.store')}}">
+        <form method="POST" action="{{route('dashboard.posts.store')}}" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="col-md-12">
@@ -48,6 +48,10 @@
                                         <option value="{{$category->id}}">{{$category->name}}</option>
                                     @endforeach
                                 </select>
+                            </div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="post_image">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
                             </div>
                         </div>
                         <!-- /.card-body -->

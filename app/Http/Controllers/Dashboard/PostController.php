@@ -6,6 +6,8 @@ use App\Category;
 use App\Http\Controllers\Controller;
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class PostController extends Controller
@@ -19,6 +21,15 @@ class PostController extends Controller
     {
 //        $posts = Post::all();
 //        $posts = Post::orderBy('created_at','desc')->get();
+
+        /*Session::put('course','STW');
+        //dd(Session::get('course'));
+        if(Session::has('course')){
+            dd('session course found');
+        }
+
+        Cookie::queue('college','IT', 60*24*2);*/
+
         $posts = Post::orderBy('created_at','desc')->paginate(10);
         return view('dashboard.posts.index',compact('posts'));
     }
@@ -42,6 +53,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request->toArray());
         /*$request->validate([
            'title' => 'required|max:50',
            'code'=>'required|unique:posts|integer',
@@ -55,7 +67,8 @@ class PostController extends Controller
             'code'=>'required|unique:posts|integer',
             'body' => 'required',
             'category_id' => 'required|integer',
-            'author_email' => 'required|email'
+            'author_email' => 'required|email',
+            'post_image' => 'required|mimes:jpeg,png,bmp,jpg'
         ];
 
 
@@ -77,6 +90,13 @@ class PostController extends Controller
         $post->category_id = $request->category_id;
         $post->author_email = $request->author_email;
 
+        $postImage = $request->file('post_image');
+        $fileName = time().'.'.$postImage->extension();
+        $postImage->move('post_images',$fileName);
+
+
+        $post->feature_image = $fileName;
+        $post->large_image = $fileName;
         $post->save();
 
         return redirect()->route('dashboard.posts.index')->with('success','Post created successffuly');

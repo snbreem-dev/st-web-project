@@ -11,12 +11,30 @@ use App\Tag;
 use App\User;
 use App\Video;
 use Carbon\Carbon;
+use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class TrainController extends Controller
 {
 
+    public function encrypt(){
+        $message = 'welcome to IUG';
+
+        $hashed = Hash::make($message);
+        //dd($hashed);
+
+        $encrypted = encrypt($message);
+        $decrypted_message = decrypt($encrypted);
+        try{
+            $decrypted_message = decrypt($encrypted.'123');
+        }catch (DecryptException $de){
+            dd('encrypted text was changed');
+        }
+        $decrypted_message = decrypt($encrypted.'123');
+        dd($decrypted_message);
+    }
     public function poly_relationships(){
         /*$user = User::find(14);
         dd($user->image->url);

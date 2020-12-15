@@ -5,6 +5,14 @@
 @section('content')
     <!-- Main content -->
     <section class="content">
+        {{App::setLocale('ar')}}
+    @if(App::isLocale('ar'))
+        Arabic is the default language
+    @endif
+        </br>
+        {{ __('messages.university') }}<br>
+        @lang('messages.college')<br>
+        {{__('welcome to course')}}
     @include('dashboard.layouts.messages')
     <!-- Default box -->
         <div class="card">
@@ -61,7 +69,8 @@
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('post_images/'.$post->feature_image)}}">
                                     </li>
                                 </ul>
                             </td>

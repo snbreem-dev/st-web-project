@@ -21,6 +21,8 @@ class CreatePostsTable extends Migration
             $table->string('large_image')->default('posts/large_image/img.jpg');
             $table->integer('views')->default(0);
             $table->integer('share')->default(0);
+            $table->integer('code')->unique()->nullable();
+            $table->string('author_email');
             $table->unsignedBigInteger('category_id')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->timestamps();

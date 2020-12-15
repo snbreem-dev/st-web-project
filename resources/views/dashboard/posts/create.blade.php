@@ -5,6 +5,7 @@
 @section('content')
     <!-- Main content -->
     <section class="content">
+        @include('dashboard.layouts.messages')
         <form method="POST" action="{{route('dashboard.posts.store')}}">
             @csrf
             <div class="row">
@@ -22,12 +23,22 @@
                         </div>
                         <div class="card-body">
                             <div class="form-group">
+                                <label for="inputName">Post Code</label>
+                                <input type="text" name="code" value="{{old('code')}}" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputName">Author Email</label>
+                                <input type="text" name="author_email" value="{{old('author_email')}}" class="form-control">
+                            </div>
+                            <div class="form-group">
                                 <label for="inputName">Post Title</label>
-                                <input type="text" name="title" class="form-control">
+                                <input type="text" name="title" value="{{old('title')}}" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="inputDescription">Post Body</label>
-                                <textarea id="inputDescription" name="body" class="form-control" rows="4"></textarea>
+                                <textarea id="inputDescription" name="body" class="form-control" rows="4">
+                                    {{old('body')}}
+                                </textarea>
                             </div>
                             <div class="form-group">
                                 <label for="inputStatus">Category</label>

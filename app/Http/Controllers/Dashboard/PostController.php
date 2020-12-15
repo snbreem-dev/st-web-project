@@ -6,6 +6,7 @@ use App\Category;
 use App\Http\Controllers\Controller;
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class PostController extends Controller
 {
@@ -17,7 +18,8 @@ class PostController extends Controller
     public function index()
     {
 //        $posts = Post::all();
-        $posts = Post::orderBy('created_at','desc')->get();
+//        $posts = Post::orderBy('created_at','desc')->get();
+        $posts = Post::orderBy('created_at','desc')->paginate(10);
         return view('dashboard.posts.index',compact('posts'));
     }
 
@@ -40,15 +42,44 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        /*$request->validate([
+           'title' => 'required|max:50',
+           'code'=>'required|unique:posts|integer',
+           'body' => 'required',
+           'category_id' => 'required|integer',
+           'author_email' => 'required|email'
+        ]);*/
+
+        $rules = [
+            'title' => 'required|max:50',
+            'code'=>'required|unique:posts|integer',
+            'body' => 'required',
+            'category_id' => 'required|integer',
+            'author_email' => 'required|email'
+        ];
+
+
+        $messages = [
+            'title.required' => 'The Post title field should be entered',
+            'title.max' => 'Title should not be more than 50 character',
+            'code.unique' => 'Post code should not duplicated'
+        ];
+
+        $validator = Validator::make($request->all(),$rules,$messages);
+        if($validator->fails()){
+            return redirect()->back()->withErrors($validator->errors())->withInput();
+        }
         //dd($request->toArray());
         $post = new Post();
         $post->title = $request->title;
         $post->body = $request->body;
+        $post->code = $request->code;
         $post->category_id = $request->category_id;
+        $post->author_email = $request->author_email;
 
         $post->save();
 
-        return redirect()->route('dashboard.posts.index');
+        return redirect()->route('dashboard.posts.index')->with('success','Post created successffuly');
     }
 
     /**
